@@ -1,5 +1,5 @@
 
-function ListadoDeportes({ deportesLista }) {
+function ListadoDeportes({ deportesLista, funcionSeleccionarDeporte }) {
     return (
         <div>
             <h2>Listado de los deportes</h2>
@@ -10,7 +10,7 @@ function ListadoDeportes({ deportesLista }) {
                         <li>{deporte.profesor}</li>
                         <li>{deporte.precioMensual}</li> 
                         <li>{deporte.categoria}</li> 
-                        <li><button>Seleccionar</button></li>  
+                        <li><button onClick={() => funcionSeleccionarDeporte(deporte)}>Seleccionar</button></li>  
                     </ul>                
                 ))}                
         </div>
